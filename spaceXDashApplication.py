@@ -52,7 +52,7 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
                                 html.Div(dcc.Graph(id='success-payload-scatter-chart')),
                                 ])
 
-# -------------------------------------------------------------------------------------------------------
+
 
 # TASK 2: Add a callback function for `site-dropdown` as input, `success-pie-chart` as output
 @app.callback(
@@ -129,8 +129,7 @@ def get_scatter_chart(entered_site, payload_range):
         
     return fig
 
-# -------------------------------------------------------------------------------------------------------
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True)
